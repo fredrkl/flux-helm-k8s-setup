@@ -1,0 +1,41 @@
+name: Deploy to AKS
+
+on:
+  workflow_dispatch:
+  push:
+  workflow_run:
+    workflows: ["Create AKS"]
+    types:
+      - completed
+
+env:
+  CLUSTER_NAME: Flux-Helm-Demo
+
+concurrency: pushing
+
+jobs:
+  Apply-yaml:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Set Context
+      uses: azure/aks-set-context@v3
+      with:
+        resource-group: ${{ env.CLUSTER_NAME }}
+        cluster-name: ${{ env.CLUSTER_NAME }}
+
+    - name: Kubectl tool installer
+      uses: Azure/setup-kubectl@v3
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Run script
+      run: |
+        kubectl get nodes
+        kubectl get ns
