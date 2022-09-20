@@ -3,6 +3,8 @@ name: Deploy to AKS
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+    - '**/yaml/syncfolder'
   workflow_run:
     workflows: ["Create AKS"]
     types:
@@ -39,4 +41,6 @@ jobs:
       run: |
         kubectl get nodes
         kubectl get ns
-        kubectl apply -k yaml/
+        kubectl apply -k yaml/bootstrap
+        sleep 50
+        kubectl apply -k yaml/startsync
