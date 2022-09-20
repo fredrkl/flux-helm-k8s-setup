@@ -14,3 +14,7 @@ There are some secrets and setup needed to get this repo going.
 
 [![Create AKS](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/createaks.yml/badge.svg)](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/createaks.yml)
 [![Deploy to AKS](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/deploy-to-aks.yml/badge.svg)](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/deploy-to-aks.yml)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
