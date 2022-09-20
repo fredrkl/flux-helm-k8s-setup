@@ -9,3 +9,18 @@ spec:
   ref:
     branch: main
   url: https://github.com/fredrkl/flux-helm-k8s-setup
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: flux-connector-demo
+  namespace: flux-system
+spec:
+  interval: 1h0m0s
+  path: ./yaml/syncfolder
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-connector-demo
+  timeout: 3m0s
+  wait: true
