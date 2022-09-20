@@ -42,5 +42,6 @@ jobs:
         kubectl get nodes
         kubectl get ns
         kubectl apply -k yaml/bootstrap
-        sleep 50
+        echo "WAITING FOR CRDs"
+        sleep 10
         kubectl apply -k yaml/startsync
