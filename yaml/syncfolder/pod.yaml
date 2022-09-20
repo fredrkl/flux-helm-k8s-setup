@@ -4,6 +4,7 @@ metadata:
   labels:
     run: apod
   name: apod
+  namespace: default
 spec:
   containers:
   - image: nginx
