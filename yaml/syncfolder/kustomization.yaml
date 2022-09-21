@@ -1,3 +1,4 @@
 resources:
 - pod.yaml
 - splunk-connector.yaml
+- splunk-connector-release.yaml
