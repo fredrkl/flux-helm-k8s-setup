@@ -21,6 +21,8 @@ spec:
       logLevel: info
     splunk-kubernetes-logging:
       enabled: true
+      containers:
+        logFormatType: cri
     splunk-kubernetes-objects:
       enabled: false
     splunk-kubernetes-metrics:
