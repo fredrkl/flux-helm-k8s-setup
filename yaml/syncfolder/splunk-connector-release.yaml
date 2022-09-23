@@ -16,7 +16,8 @@ spec:
   values:
     global:
       splunk:
-        host: prd-p-mssza.splunkcloud.com
+        hec:
+          host: prd-p-mssza.splunkcloud.com
       logLevel: info
     splunk-kubernetes-logging:
       enabled: true
@@ -28,5 +29,5 @@ spec:
     - kind: Secret
       name: splunk-token
       valuesKey: token
-      targetPath: global.splunk.token
+      targetPath: global.splunk.hec.token
       optional: false
