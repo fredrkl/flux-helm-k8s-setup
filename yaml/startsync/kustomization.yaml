@@ -1,2 +1,3 @@
 resources:
 - startsync.yaml
+- splunk-secret.yaml

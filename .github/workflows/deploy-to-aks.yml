@@ -37,6 +37,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Inject Splunk Token
+      uses: yegobox/secret-parser@v1.0.1
+      with:
+        filename: ./yaml/startsync/splunk-secret.yaml
+        secret-name: SPLUNK_TOKEN
+        secret-value: ${{ secrets.SPLUNK_TOKEN }}
+
     - name: Kick off GitOps
       run: |
         kubectl get nodes

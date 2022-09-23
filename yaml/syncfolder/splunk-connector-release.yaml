@@ -24,3 +24,9 @@ spec:
       enabled: false
     splunk-kubernetes-metrics:
       enabled: false
+  valuesFrom:
+    - kind: Secret
+      name: splunk-token
+      valuesKey: token
+      targetPath: global.splunk.token
+      optional: false
