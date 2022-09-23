@@ -16,6 +16,10 @@ There are some secrets and setup needed to get this repo going.
 [![Create AKS](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/createaks.yml/badge.svg)](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/createaks.yml)
 [![Deploy to AKS](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/deploy-to-aks.yml/badge.svg)](https://github.com/fredrkl/flux-helm-k8s-setup/actions/workflows/deploy-to-aks.yml)
 
+## Lessons Learned
+
+- If you are running in a K8s cluster that is not using Docker, i.e., a type of CRI _container runtime_, then you need to set the container log format type to _cri_.
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

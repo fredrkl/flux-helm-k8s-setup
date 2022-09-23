@@ -18,6 +18,7 @@ spec:
       splunk:
         hec:
           host: prd-p-mssza.splunkcloud.com
+          indexName: main
       logLevel: info
     splunk-kubernetes-logging:
       enabled: true
