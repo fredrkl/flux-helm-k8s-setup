@@ -17,9 +17,9 @@ spec:
     global:
       splunk:
         hec:
-          host: prd-p-mssza.splunkcloud.com
+          host: http-inputs-prd-p-mssza.splunkcloud.com
           indexName: main
-          port: 8088
+          port: 443
       logLevel: info
     splunk-kubernetes-logging:
       enabled: true
