@@ -1,6 +1,6 @@
 # Splunk Connector setup with Flux and Helm
 
-Demo repo showing how to use Flux v2 and install a Helm Chart
+Demo repo showing how to use Flux v2 and install the _Splunk Connector_ Helm Chart.
 
 ## Setup
 
