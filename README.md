@@ -15,7 +15,7 @@ There are some secrets and setup needed to get this repo going.
 ## Lessons Learned
 
 - If you are running in a K8s cluster that is not using Docker, i.e., a type of CRI _container runtime_, then you need to set the container log format type to _cri_.
-- If you are connecting to the Splunk Cloud _trial__, then you need the _insecure_ setting: <https://github.com/fredrkl/flux-helm-k8s-setup/blob/bc2488b6c284d4844d0a571037af2c59f9d1bfd6/yaml/syncfolder/splunk-connector-release.yaml#L23>. Splunk Cloud Trial uses self-signed certificates.
+- If you are connecting to the Splunk Cloud _trial__, then you need the _insecure_ setting: <https://github.com/fredrkl/flux-helm-k8s-setup/blob/bc2488b6c284d4844d0a571037af2c59f9d1bfd6/yaml/syncfolder/splunk-connector-release.yaml#L23> Splunk Cloud Trial uses self-signed certificates.
 
 ![Splunk](./images/splunk-cloud.png)
 
