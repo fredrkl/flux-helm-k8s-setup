@@ -5,7 +5,7 @@ on:
   push:
     paths-ignore:
     - 'yaml/syncfolder/**'
-    - README.md
+    - 'README.md'
   workflow_run:
     workflows: ["Create AKS"]
     types:
