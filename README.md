@@ -10,7 +10,8 @@ There are some secrets and setup needed to get this repo going.
 2. Create an RG in Azure and note down the name
 3. Create a GitHub secret holding an Azure Service Principal following this guide: <https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md> giving it access to the RG in step 2.
 4. Make sure you have a Splunk instance ready for the logs. You can create a Spunk instance using the free trial at <https://www.splunk.com/en_us/products/splunk-cloud-platform.html>.
-5. Update the URL in the file: <https://github.com/fredrkl/flux-helm-k8s-setup/blob/bc2488b6c284d4844d0a571037af2c59f9d1bfd6/yaml/syncfolder/splunk-connector-release.yaml#L20>
+5. Create a Splunk HTTP token that has access to write to the main index. Add the token to a GitHub secret called: SPLUNK_TOKEN.
+6. Update the URL in the file: <https://github.com/fredrkl/flux-helm-k8s-setup/blob/bc2488b6c284d4844d0a571037af2c59f9d1bfd6/yaml/syncfolder/splunk-connector-release.yaml#L20>
 
 ## Lessons Learned
 
